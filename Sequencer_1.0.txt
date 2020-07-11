@@ -1,0 +1,22 @@
+#N canvas 801 194 450 300 12;
+#X obj 36 139 r Audio;
+#X obj 36 166 route Delay Reverb Envelope;
+#X floatatom 36 193 5 0 0 0 - - -;
+#X floatatom 98 193 5 0 0 0 - - -;
+#X floatatom 160 193 5 0 0 0 - - -;
+#X obj 36 12 SeqCtrl;
+#X msg 279 128 \; pd dsp \$1 \;;
+#X obj 279 102 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 278 232 \; pd \$1-properties \;;
+#X msg 278 180 audio;
+#X obj 278 206 symbol;
+#X msg 327 180 midi;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 7 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 0;
